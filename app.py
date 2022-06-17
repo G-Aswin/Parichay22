@@ -14,7 +14,7 @@ def prefest():
    return render_template('prefest.html')
 
 @app.route('/events')
-def prefest():
+def events():
    return redirect("https://drive.google.com/file/d/1pe8VSO1KZaiY-mx959LKLnhtJULHw0sc/view")
 
 # @app.route('/events')
