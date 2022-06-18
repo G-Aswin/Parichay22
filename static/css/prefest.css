@@ -182,22 +182,30 @@
     font-weight: 300;
     width: max-content;
   }
+<<<<<<< HEAD
   .prefestbody #timeline-content .timeline .event a {
     color: #6c6d6d;
+=======
+  a {
+    color: #ffffff;
+>>>>>>> dcd53c4eb9045d169adf50bd2141136c978aac0f
     text-decoration: none;
     text-transform: uppercase;
     display: block;
     letter-spacing: 0.3em;
     font-size: 0.6em;
     font-weight: 400;
-    background: #252727;
+    background: #fc4300;
     padding: 0.3rem 1rem;
     margin: 1.9rem 0 0 0;
+    transition: 0.3s;
+    border-bottom: 0.35em solid black;
+
     /* float: right; */
   }
   .prefestbody #timeline-content .timeline .event a:hover {
     color: white;
-    background: #fc4300;
+    background: #ffc400;
     border-bottom: 0.35em solid black;
   }
   .prefestbody #timeline-content  h1{
@@ -207,7 +215,12 @@
     font-weight: 700;
     font-size: 2.4em;
   }
+<<<<<<< HEAD
   .prefestbody #timeline-content h3{
+=======
+
+  h3{
+>>>>>>> dcd53c4eb9045d169adf50bd2141136c978aac0f
     font-family: 'Saira', sans-serif;
     letter-spacing: 1.5px;
     color: white;
