@@ -151,13 +151,16 @@
     font-weight: 800;
     src: url(https://fonts.gstatic.com/s/sairaextracondensed/v11/-nFvOHYr-vcC7h8MklGBkrvmUG9rbpkisrTrT27h2wpk.ttf) format('truetype');
   }
+
+
+
+  /* ------------------------------------------------------------ */
   /* Variables */
   /* Base */
   
   .gradient {
     background: linear-gradient(269deg, #f96167, #fee66d);
-    background-size: 400% 400%;
-  
+    background-size: 400% 400%;   
     animation: AnimationName 12s ease infinite;
   }
   
@@ -166,19 +169,26 @@
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
   }
-
-  
-  
-  body {
-    background: #252827;
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background: linear-gradient(269deg, #f96167, #fee66d);
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+  .prefestbody {
     font-size: 26px;
     /* white-space: pre-line; */
   }
-  p {
+  .prefestbody #timeline-content .timeline .event p {
     font-weight: 300;
+    width: max-content;
   }
+<<<<<<< HEAD
+  .prefestbody #timeline-content .timeline .event a {
+    color: #6c6d6d;
+=======
   a {
     color: #ffffff;
+>>>>>>> dcd53c4eb9045d169adf50bd2141136c978aac0f
     text-decoration: none;
     text-transform: uppercase;
     display: block;
@@ -193,34 +203,35 @@
 
     /* float: right; */
   }
-  a:hover {
+  .prefestbody #timeline-content .timeline .event a:hover {
     color: white;
     background: #ffc400;
     border-bottom: 0.35em solid black;
   }
-  strong {
-    font-weight: 600;
-  }
-  h1{
+  .prefestbody #timeline-content  h1{
     font-family: 'Saira', sans-serif;
     letter-spacing: 1.5px;
     color: white;
     font-weight: 700;
     font-size: 2.4em;
   }
+<<<<<<< HEAD
+  .prefestbody #timeline-content h3{
+=======
 
   h3{
+>>>>>>> dcd53c4eb9045d169adf50bd2141136c978aac0f
     font-family: 'Saira', sans-serif;
     letter-spacing: 1.5px;
     color: white;
     font-weight: 400;
     font-size: 1.4em;
   }
-  #timeline-content {
+  /* Timeline */
+  #timeline-content{
     margin-top: 50px;
     text-align: center;
   }
-  /* Timeline */
   .timeline {
     border-left: 4px solid #ffffff;
     border-bottom-right-radius: 4px;
@@ -288,4 +299,130 @@
     width: 11px;
     content: "";
     top: 5px;
+  }
+  footer{
+    bottom: 0;
+  }
+  .merch-content{
+    text-align: center;
+  }
+   .merch-content h1 {
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: 700;
+    font-size: 2.4em;
+  }
+  .merch-content a {
+    color: #6c6d6d;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.3em;
+    font-size: 0.6em;
+    font-weight: 400;
+    background: #252727;
+    padding: 0.3rem 1rem;
+    margin: 1.9rem 0 0 0;
+  }
+  .merch-content a:hover{
+    color: white;
+    background: #fc4300;
+    border-bottom: 0.35em solid black;
+  }
+  /* --------------------------------------------------------------------- */
+
+
+
+  /* responsiveness */
+  @media screen and  (max-width : 680px) {
+    .prefestbody #timeline-content .timeline .event p {
+      font-weight: 300;
+      font-size: 0.6em;
+      width: max-content;
+    }
+    .prefestbody #timeline-content .timeline .event a {
+      display: flex;
+      font-size: 0.5em;
+      padding: 0.1rem 2.5rem 0.1rem 7.0rem;
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-end;
+    }
+    .prefestbody #timeline-content  h1{
+      font-size: 1.4em;
+    }
+    .prefestbody #timeline-content h3{
+      font-size: 0.9em;
+    }
+    /* Timeline */
+    #timeline-content{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .timeline {
+      max-width: 36%;
+    }
+    .timeline h1 {
+      font-size: 1.4em;
+    }
+    .timeline h2,
+    .timeline h3 {
+      font-size: 1.4em;
+    }
+    .timeline .event:before {
+      left: -200.5px;
+      text-align: right;
+      font-size: 0.5em;
+      min-width: 120px;
+    }
+    .merch-content h1 {
+      font-size: 1.4em;
+    }
+  }
+  @media screen and (max-width:350px) {
+    .prefestbody #timeline-content .timeline .event p {
+      font-weight: 300;
+      font-size: 0.6em;
+      width: max-content;
+    }
+    .prefestbody #timeline-content .timeline .event a {
+      display: flex;
+      font-size: 0.5em;
+      padding: 0.1rem 2.5rem 0.1rem 7rem;
+      flex-direction: row;
+      align-content: center;
+      justify-content: flex-end;
+      margin-left: -15px;
+    }
+    .prefestbody #timeline-content  h1{
+      font-size: 1.2em;
+    }
+    .prefestbody #timeline-content h3{
+      font-size: 0.7em;
+    }
+    .merch-content h1 {
+      font-size: 1.4em;
+    }
+    /* Timeline */
+    #timeline-content{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .timeline {
+      max-width: 36%;
+    }
+    .timeline h1 {
+      font-size: 1.2em;
+    }
+    .timeline h2,
+    .timeline h3 {
+      font-size: 1.2em;
+    }
+    .timeline .event:before {
+      left: -189.5px;
+      text-align: right;
+      font-size: 0.3em;
+      min-width: 120px;
+    }
   }

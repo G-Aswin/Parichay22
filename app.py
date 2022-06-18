@@ -7,6 +7,9 @@ app = Flask(__name__)
 def index():
    print('Request for index page received')
    # return render_template('index.html')
+<<<<<<< HEAD
+   return redirect("/events")
+=======
    return redirect("/prefest")
 
 @app.route('/prefest')
@@ -21,7 +24,11 @@ def events():
 # def events():
 #    print('Request for events page received')
 #    return render_template('events.html')
+>>>>>>> dcd53c4eb9045d169adf50bd2141136c978aac0f
 
+@app.route('/events')
+def landingpage():
+   return render_template('events.html')
 
 if __name__ == '__main__':
    app.run()
