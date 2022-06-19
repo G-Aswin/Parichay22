@@ -270,7 +270,8 @@
     top: 0;
   }
   .timeline .event:before {
-    left: -217.5px;
+    left: -270.5px;
+    width:200px;
     color: rgb(255, 255, 255);
     content: attr(data-date); 
     text-align: right;
