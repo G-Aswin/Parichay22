@@ -23,9 +23,9 @@ def events():
    print('Request for events page received')
    return render_template('events.html')
 
-@app.route('/events')
-def landingpage():
-   return render_template('events.html')
+# @app.route('/events')
+# def landingpage():
+#    return render_template('events.html')
 
 if __name__ == '__main__':
    app.run()

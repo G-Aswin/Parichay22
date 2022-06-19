@@ -172,7 +172,7 @@
   .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #495057;
     background: linear-gradient(269deg, #f96167, #fee66d);
-    border-color: #dee2e6 #dee2e6 #fff;
+    border-color: #fee66d;
 }
   .prefestbody {
     font-size: 26px;
@@ -320,6 +320,9 @@
     background: #fc4300;
     border-bottom: 0.35em solid black;
   }
+  .nav-tabs {
+    border-bottom: 1px solid #fee66d;
+}
   /* --------------------------------------------------------------------- */
 
 
@@ -374,12 +377,12 @@
     .prefestbody #timeline-content .timeline .event p {
       font-weight: 300;
       font-size: 0.6em;
-      width: max-content;
+      width: fit-content;
     }
     .prefestbody #timeline-content .timeline .event a {
       display: flex;
-      font-size: 0.5em;
-      padding: 0.1rem 2.5rem 0.1rem 7rem;
+      font-size: 0.4em;
+    padding: 0.1rem 2.5rem 0.1rem 6rem;
       flex-direction: row;
       align-content: center;
       justify-content: flex-end;
