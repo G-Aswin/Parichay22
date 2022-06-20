@@ -4,7 +4,7 @@ from flask_pymongo import pymongo
 
 app = Flask(__name__)
 
-client = pymongo.MongoClient("mongodb+srv://cat-rnsit:parichay2022@cluster0.nol6pxm.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://cat-rnsit:parichay2022@cluster0.cwu4w3u.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
 
 @app.route('/')
