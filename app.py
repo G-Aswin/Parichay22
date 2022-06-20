@@ -1,7 +1,11 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+from flask_pymongo import pymongo
+
 app = Flask(__name__)
 
+client = pymongo.MongoClient("mongodb+srv://cat-rnsit:parichay2022@cluster0.nol6pxm.mongodb.net/?retryWrites=true&w=majority")
+db = client.test
 
 @app.route('/')
 def index():
