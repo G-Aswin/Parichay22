@@ -1,6 +1,5 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-import db
 
 
 app = Flask(__name__)
@@ -17,9 +16,9 @@ def index():
 def prefest():
    return render_template('prefest.html')
 
-# @app.route('/events')
-# def events():
-#    return redirect("https://drive.google.com/file/d/1pe8VSO1KZaiY-mx959LKLnhtJULHw0sc/view")
+@app.route('/brochure')
+def brochure():
+   return redirect("https://drive.google.com/file/d/1pe8VSO1KZaiY-mx959LKLnhtJULHw0sc/view")
 
 @app.route('/events')
 def events():
