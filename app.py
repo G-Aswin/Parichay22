@@ -11,7 +11,8 @@ app = Flask(__name__)
 def index():
    print('Request for index page received')
    # return render_template('index.html')
-   return redirect("/prefest")
+   # return redirect("/prefest")
+   return render_template("prefest.html")
 
 @app.route('/prefest')
 def prefest():
