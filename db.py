@@ -1,4 +1,5 @@
 import collections
+from sqlite3 import Date
 from flask_pymongo import pymongo
 
 client = pymongo.MongoClient("mongodb+srv://cat-rnsit:parichay2022@cluster0.cwu4w3u.mongodb.net/?retryWrites=true&w=majority")
@@ -17,11 +18,11 @@ winners = db.winners
 
 # printing list of events with their respective date
 
-event_list = events.find({},{'_id':0,'event_name':1,'date':1})
+event_list = events.find({},{'_id':0,'event_id':1,'event_name':1,'date':1})
 e_l = list()
 for event in event_list:
 	# print(f"{event['event_name']} is on {event['date']}")
-	e_l.append(f"{event['event_name']} is on {event['date']}")
+	e_l.append(f" {event['event_id']}   {event['event_name']} is on {event['date']}")
 
 for e in e_l:
 	print(e)
