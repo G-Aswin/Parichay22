@@ -23,6 +23,15 @@ def prefest():
 @app.route('/events')
 def events():
    print('Request for events page received')
+@app.route('/score')
+def score():
+   return render_template('score.html')
+
+@app.route('/admin')
+def admin():
+   return render_template('admin.html')
+
+
 
    events = db.events
    department = db.department
