@@ -337,7 +337,7 @@ footer{
   .prefestbody #timeline-content .timeline .event p {
     font-weight: 300;
     font-size: 0.6em;
-    width: max-content;
+    width: 170px;
   }
   .prefestbody #timeline-content .timeline .event a {
     display: flex;
