@@ -1,6 +1,7 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import db
+import scoreboard
 # from db import day1events, day2events
 from flask import g
 
@@ -31,6 +32,10 @@ def score():
    print("reached score")
    db.update_winner()
    return '<h1> score updated </h1>'
+
+@app.route("/scoreboard")
+def scoreboard_display():
+   return '<h1> scoreboard </h1>'
 
 @app.route('/events')
 def events():

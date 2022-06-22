@@ -117,7 +117,7 @@ def update_winner():
 		}
 	winner_update = db.winners.insert_one(record)
 
-update_winner()
+# update_winner()
 
 # """command for printing all the document within event"""
 
