@@ -3,8 +3,6 @@ import db
 departments = db.department
 winner_doc = db.winners    
 
-global_length_winner = 0
-
 dep_list = departments.find(
     {},
     {
@@ -30,15 +28,14 @@ board = {
             'Information Science': 0
         }
 
-def isIncreased() -> int:
+def isIncreased(count) -> bool:
     winner_list = winner_doc.find({})
     win_count = 0
     for win in winner_list:
         win_count+=1
-    return win_count
+    return win_count > count
 
 def update_score():
-
     doc = winner_doc.find(
         {},
         {
@@ -53,15 +50,6 @@ def update_score():
     department_name = dep_dict[str(concerned_department_id)]
     board[str(department_name)] += score_to_be_updated
     print(board)
-
-
-
-def setGlobal(count):
-    if isIncreased() > count:
-        global_length_winner = count
-        update_score()
-
-setGlobal(global_length_winner)
 
     
 

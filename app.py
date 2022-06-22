@@ -37,6 +37,16 @@ def score():
 def scoreboard_display():
    return '<h1> scoreboard </h1>'
 
+@app.route("/refresh")
+def refresh_scoreboard():
+   file1 = open("winner.txt","w+")
+   win_count = file1.read()
+   if scoreboard.isIncreased(int(win_count)):
+      file1.write(win_count)
+      scoreboard.update_score()
+
+   return '<h1>updated scoreboard</h1>'
+
 @app.route('/events')
 def events():
    print('Request for events page received')
