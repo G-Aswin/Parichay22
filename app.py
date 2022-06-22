@@ -39,11 +39,11 @@ def scoreboard_display():
 
 @app.route("/refresh")
 def refresh_scoreboard():
-   file1 = open("winner.txt","w+")
-   win_count = file1.read()
-   if scoreboard.isIncreased(int(win_count)):
-      file1.write(win_count)
-      scoreboard.update_score()
+   # file1 = open("winner.txt","r+")
+   # win_count = file1.read()
+   # if scoreboard.winner_count() > int(win_count):
+   #    file1.write(scoreboard.winner_count())
+   #    scoreboard.update_score()
 
    return '<h1>updated scoreboard</h1>'
 

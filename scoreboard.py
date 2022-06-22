@@ -28,12 +28,12 @@ board = {
             'Information Science': 0
         }
 
-def isIncreased(count) -> bool:
+def winner_count() -> int:
     winner_list = winner_doc.find({})
     win_count = 0
     for win in winner_list:
         win_count+=1
-    return win_count > count
+    return win_count
 
 def update_score():
     doc = winner_doc.find(
