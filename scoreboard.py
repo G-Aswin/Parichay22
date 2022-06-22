@@ -52,13 +52,17 @@ def update_score():
     score_to_be_updated = doc[0]['points_scored']
     department_name = dep_dict[str(concerned_department_id)]
     board[str(department_name)] += score_to_be_updated
+    print(board)
+
+
 
 def setGlobal(count):
-    if isIncreased() > global_length_winner:
+    if isIncreased() > count:
         global_length_winner = count
         update_score()
-    
-print(board)
+
+setGlobal(global_length_winner)
+
     
 
 
