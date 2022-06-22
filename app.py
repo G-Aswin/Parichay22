@@ -20,6 +20,18 @@ def prefest():
    print('Request for prefest page received')
    return redirect("/events")
 
+@app.route('/admin_control')
+def admin_route():
+   print("reached admin")
+
+   return '<h1> Admin Page </h1>'
+
+@app.route('/admin_control/score')
+def score():
+   print("reached score")
+   db.update_winner()
+   return '<h1> score updated </h1>'
+
 @app.route('/events')
 def events():
    print('Request for events page received')

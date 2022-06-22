@@ -12,6 +12,57 @@ events = db.events
 department = db.department
 winners = db.winners
 
+
+def update_winner():
+	 print("updated winner")
+
+	# event_list = events.find(
+	# 	{},
+	# 	{
+	# 		'_id' : 1,
+	# 		'event_name' : 1
+	# 	})
+	# dep_list = department.find(
+	# 	{},
+	# 	{
+	# 		'_id' : 1,
+	# 		'dept_name': 1
+	# 	}
+	# )
+	# # print(dep_list[1])
+
+	# event_dict = {}
+	# dep_dict = {}
+
+	# for event in event_list:
+	# 	event_dict[str(event['event_name'])] = event['_id']
+	
+	# for dep in dep_list:
+	# 	dep_dict[str(dep['dept_name'])] = dep['_id']
+
+	# dept_name = dep_dict['Computer Science']
+	# event_name = event_dict['CODM']
+	# pos = 3
+	# scored = 100
+	# winner_name = 'stud'
+
+	# ins = [dept_name,event_name,pos,scored,winner_name]
+
+
+	# record = {
+	# 	'dept_id': ins[0], 
+	# 	'event_id': ins[1], 
+	# 	'position': ins[2], 
+	# 	'points_scored': ins[3], 
+	# 	'winner_name': ins[4]
+
+	# 	}
+	# winner_update = db.winners.insert_one(record)
+
+
+
+
+
 # """command for printing all the document within event"""
 
 # event_list_all = events.find({})
