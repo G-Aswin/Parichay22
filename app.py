@@ -40,6 +40,7 @@ def events():
          "venue": 1,
          "max_points": 1,
          "google_form_link": 1,
+         "start_hour" : 1
       },
    )
 
@@ -54,8 +55,8 @@ def events():
       else:
          day2events.append(event)
 
-   day1events = sorted(day1events, key=lambda d: d['time_begin']) 
-   day2events = sorted(day2events, key=lambda d: d['time_begin']) 
+   day1events = sorted(day1events, key=lambda d: int(d['start_hour'])) 
+   day2events = sorted(day2events, key=lambda d: int(d['start_hour'])) 
 
 
 
