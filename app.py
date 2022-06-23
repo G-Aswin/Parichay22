@@ -23,6 +23,7 @@ def prefest():
 @app.route('/events')
 def events():
    print('Request for events page received')
+   return render_template('events.html')
 @app.route('/score')
 def score():
    return render_template('score.html')
