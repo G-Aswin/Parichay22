@@ -72,20 +72,20 @@ dep_list = department.find({})
 
 
 
-def update_winner():
+def update_winner(event_id, dept_id, position, points, winner_name):
 	print("updated winner")
 
 	event_list = events.find(
 		{},
 		{
 			'_id' : 1,
-			'event_name' : 1
+			'event_id' : 1
 		})
 	dep_list = department.find(
 		{},
 		{
 			'_id' : 1,
-			'dept_name': 1
+			'dept_id': 1
 		}
 	)
 	# print(dep_list[1])
@@ -94,18 +94,18 @@ def update_winner():
 	dep_dict = {}
 
 	for event in event_list:
-		event_dict[str(event['event_name'])] = event['_id']
+		event_dict[str(event['event_id'])] = event['_id']
 	
 	for dep in dep_list:
-		dep_dict[str(dep['dept_name'])] = dep['_id']
+		dep_dict[str(dep['dept_id'])] = dep['_id']
 
-	dept_name = dep_dict['Electrical and Electronics']
-	event_name = event_dict['Make Up']
-	pos = 1
-	scored = 69
-	winner_name = 'Raju_tester'
+	dept_id = dep_dict[dept_id]
+	event_id = event_dict[event_id]
+	pos = position
+	scored = points
+	winner_name = winner_name
 
-	ins = [dept_name,event_name,pos,scored,winner_name]
+	ins = [dept_id,event_id,pos,scored,winner_name]
 
 
 	record = {
