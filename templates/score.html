@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Parichay Leaderboard</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+	<link rel="stylesheet" href="/static/css/score.css">
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon-32x32.png">
+
+	<link rel="stylesheet" href="/static/css/prefest.css" </head>
+
+
+<body>
+	<!-- partial:index.partial.html -->
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Parichay Leaderboard</title>
+		<link rel="icon" type="image/x-icon" href="/static/images/favicon-32x32.png">
+
+	</head>
+
+	<body class="gradient">
+		<!-- 	<div class="blog">Visit <a href="#" target="_blank">My Blog</a></div> -->
+		<div class="container">
+
+			<div class="prichay-img" style="display: flex;align-items: center;justify-content: center;">
+				<img src="/static/images/CoralYellowExport.png" alt="PARICHAY" style="width: 40%;">
+			</div>
+
+			<div class="leaderboard">
+				<div class="head">
+					<i class="fas fa-crown"></i>
+					<h1>Department Scoreboard</h1>
+				</div>
+				<div class="body">
+					<ol>
+						{% for pair in dept_points %}
+						<li>
+							<mark>{{pair[0]}}</mark>
+							<small>{{pair[1]}}</small>
+						</li>
+						{% endfor %}
+						<!-- <li>
+							<mark>Jerry Wood</mark>
+							<small>948</small>
+						</li>
+						<li>
+							<mark>Brandon Barnes</mark>
+							<small>750</small>
+						</li>
+						<li>
+							<mark>Raymond Knight</mark>
+							<small>684</small>
+						</li>
+						<li>
+							<mark>Trevor McCormick</mark>
+							<small>335</small>
+						</li>
+						<li>
+							<mark>Andrew Fox</mark>
+							<small>296</small>
+						</li> -->
+					</ol>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	</html>
+	<!-- partial -->
+	<!-- <script  src="./script.js"></script> -->
+
+</body>
+
+</html>

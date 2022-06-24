@@ -12,6 +12,113 @@ events = db.events
 department = db.department
 winners = db.winners
 
+dep_list = department.find({})
+
+
+# depart = [
+# 	{
+# 	'dept_id': 1, 
+# 	'dept_name': 'Computer Science', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 2, 
+# 	'dept_name': 'Data Science', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 3, 
+# 	'dept_name': 'AI ML', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 4, 
+# 	'dept_name': 'Mechanical', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 5, 
+# 	'dept_name': 'MCA', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 6, 
+# 	'dept_name': 'Civil', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 7, 
+# 	'dept_name': 'Electronics and Communication', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 8, 
+# 	'dept_name': 'Electronics and Instrumentation', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 9, 
+# 	'dept_name': 'Electrical and Electronics', 
+# 	'logo_img': 'image'
+# 	},
+# 	{
+# 	'dept_id': 10, 
+# 	'dept_name': 'Information Science', 
+# 	'logo_img': 'image'
+# 	},
+# ]
+
+# department_insert = db.department.insert_many(depart)
+
+
+
+def update_winner(event_id, dept_id, position, points, winner_name):
+	print("updated winner")
+
+	event_list = events.find(
+		{},
+		{
+			'_id' : 1,
+			'event_id' : 1
+		})
+	dep_list = department.find(
+		{},
+		{
+			'_id' : 1,
+			'dept_id': 1
+		}
+	)
+	# print(dep_list[1])
+
+	event_dict = {}
+	dep_dict = {}
+
+	for event in event_list:
+		event_dict[str(event['event_id'])] = event['_id']
+	
+	for dep in dep_list:
+		dep_dict[str(dep['dept_id'])] = dep['_id']
+
+	dept_id = dep_dict[dept_id]
+	event_id = event_dict[event_id]
+	pos = position
+	scored = points
+	winner_name = winner_name
+
+	ins = [dept_id,event_id,pos,scored,winner_name]
+
+
+	record = {
+		'dept_id': ins[0], 
+		'event_id': ins[1], 
+		'position': ins[2], 
+		'points_scored': ins[3], 
+		'winner_name': ins[4]
+		}
+	winner_update = db.winners.insert_one(record)
+
+# update_winner()
+
 # """command for printing all the document within event"""
 
 # event_list_all = events.find({})
